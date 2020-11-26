@@ -50,6 +50,13 @@
             position: relative;
         }
 
+        /* 眼睛眨眼动画 */
+        @keyframes blink {
+            40% {
+                transform: rotateX(80deg);
+            }
+        }
+
         #eye,
         #eye2 {
             width: 11px;
@@ -62,13 +69,14 @@
 
             /* 旋转该元素 */
             transform: rotate(8deg);
+            animation: blink 1s ease-in-out infinite alternate;
         }
 
         #eye2 {
             /* 使其旋转对称 */
             transform: rotate(-8deg);
             left: 69px;
-            top: 17px
+            top: 17px;
         }
 
         #mouth {
