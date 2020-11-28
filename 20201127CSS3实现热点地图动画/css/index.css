@@ -1,0 +1,172 @@
+/* CSS 通配符 * 号，表示所有的元素一开始默认的内边距为 0 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 背景色 */
+    background: #31363a;
+}
+.china-map{
+    /* 给地图加上相对定位 */
+    position: relative;
+    /* 给地图设置宽高 */
+    width: 747px;
+    height: 617px;
+    /* 设置背景图片，指定为不重复，并且居中 */
+    background: url('../img/map_black_bg.png') no-repeat center;
+    /* 将图片设置为离顶部60px，左右居中 */
+    margin: 60px auto 0;  
+}
+/* 区域地点 */
+.region{
+    /* 绝对定位 */
+    position: absolute;
+}
+/* 青海 */
+.region-qh{
+    top: 302px;
+    left: 308px;
+}
+/* 湖北 */
+.region-hb{
+    top: 394px;
+    left: 526px;
+}
+/* 北京 */
+.region-bj{
+    top: 229px;
+    left: 559px;
+}
+/* 四川*/
+.region-sc{
+    top: 403px;
+    left: 401px;
+}
+/* 云南 */
+.region-yn {
+    top: 516px;
+    left: 358px;
+}
+/* 陕西 */
+.region-sx{
+    top: 348px;
+    left: 473px;
+}
+/* 广东 */
+.region-gd{
+    top: 515px;
+    left: 526px;
+}
+/* 辽宁 */
+.region-ln {
+    top: 200px;
+    left: 652px;
+}
+/* 江苏 */
+.region-js {
+    top: 371px;
+    left: 637px;
+}
+/* 香港 */
+.region-xg {
+    top: 539px;
+    left: 554px;
+}
+/* 山东 */
+.region-sd{
+    top: 300px;
+    left: 604px;
+}
+/* 内蒙古 */
+.region-nmg {
+    top: 250px;
+    left: 470px;
+}
+/* 小圆点 */
+.region .dot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5px 0 0 -5px;
+    width: 10px;
+    height: 10px;
+    background: #a2a9b4;
+    opacity: 1;
+    border-radius: 50%;
+}
+/* 向外扩散的圆圈 */
+.region .place{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -33px 0 0 -33px;
+    width: 66px;
+    height: 66px;
+    border: 2px solid #b7b7b7;
+    border-radius: 50%;
+    /* 透明度 */
+    opacity: 0.12;
+    /* 阴影 */
+    box-shadow: 0 0 4px #82878f inset;
+
+    /* animation：动画名 动画时长 动画速度曲线 动画播放次数 向前和向后填充模式都被应用 */
+    animation: scale 2s ease-out infinite both;
+}
+/*动画*/
+@keyframes scale{
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+/* 地名 */
+.region .txt{
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-size: 14px;
+    color: #ccc;
+    width: 50px;
+}
+.region .place01 {
+    animation-delay: 0.5s;
+}
+.region .place02 {
+    animation-delay: 1s;
+}
+.region .place03 {
+    animation-delay: 1.5s;
+}
+.region .place04 {
+    animation-delay: 2.0s;
+}
+/* 颜色 */
+/* 蓝色 */
+.region.blue .place {
+    width: 120px;
+    height: 120px;;
+    margin: -64px 0 0 -64px;
+    border: 1px solid #009fd9;
+    box-shadow: 0 0 12px #009fd9 inset;
+}
+.region.blue .dot{
+    background: #0080d9;
+}
+/* 橘色 */
+.region.orange .place{
+    width: 60px;
+    height: 60px;
+    margin: -32px 0 0 -32px;
+    border: 2px solid  #f90;
+    border: 2px solid #f90;
+    box-shadow: 0 0 12px #f90 inset;
+}
+.region.orange .dot{
+    background: #f90;
+}
