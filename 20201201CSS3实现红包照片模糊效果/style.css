@@ -1,0 +1,7 @@
+/* CSS 样式（展示重点部分） */
+.container {
+    width: 600px;
+    height: 400px;
+    background: url(image.jpg) no-repeat;
+    overflow: hidden;
+}
